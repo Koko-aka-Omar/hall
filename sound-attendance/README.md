@@ -21,6 +21,10 @@ The student page then exposes **DEVELOPER TEST ONLY**, requiring the lecturer ke
 
 For phones, use the same server through **trusted HTTPS** (an HTTPS reverse proxy, or set `TLS_CERT` and `TLS_KEY` to PEM certificate/key paths). Plain HTTP at a LAN IP cannot access phone microphones. `PORT`, `HOST`, and `LECTURER_KEY` are optional environment settings. Keep the lecturer key private.
 
+## Free HTTPS hosting
+
+[Deploy to Render](https://render.com/deploy?repo=https://github.com/Koko-aka-Omar/hall) uses the repo's root `render.yaml`: one free Node web service, no database, and a generated lecturer key. Sign in to Render and deploy the Blueprint. Open its HTTPS URL on both lecturer and student devices. Get `LECTURER_KEY` from the service's Environment settings or startup logs. Free services sleep after 15 idle minutes; waking/restarting clears this prototype's in-memory attendance. Set `DEMO_MODE=1` in Render only when developer simulation is needed.
+
 ## Pages
 
 - `/lecturer.html` — start ELEC 210, broadcast/replay signals, stop, view the live register, mark students present manually.
