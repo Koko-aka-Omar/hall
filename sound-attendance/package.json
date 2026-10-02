@@ -1,0 +1,7 @@
+{
+  "name": "sound-attendance-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "start": "node server/server.js", "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=20" }
+}
